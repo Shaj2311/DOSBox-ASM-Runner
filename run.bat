@@ -12,6 +12,13 @@ if not exist "%~f1" (
     exit /b
 )
 
+REM Assemble with NASM
+nasm -f win32 "%~1" -o "%filename%.obj"
+if errorlevel 1 (
+    echo [ERROR] Assembly failed. Check your NASM syntax.
+    exit /b 1
+)
+
 REM Extract file name without extension
 set "fileTitle=%~n1"
 
@@ -33,6 +40,7 @@ REM Create temporary config (fullscreen, auto mount, auto compile and debug)
 >> temp.conf echo [autoexec]
 >> temp.conf echo mount c C://Path/To/Your/ASM/Files
 >> temp.conf echo c:
+>> temp.conf echo del %fileTitle%.com
 >> temp.conf echo nasm %fileTitle%.asm -o %fileTitle%.com
 >> temp.conf echo afd %fileTitle%.com
 
@@ -42,4 +50,5 @@ C://Path/To/DOSBox.exe -conf temp.conf
 
 REM delete temp.conf once DOSBox is launched
 del temp.conf
+
 
