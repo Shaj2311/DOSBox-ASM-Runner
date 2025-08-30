@@ -42,7 +42,7 @@ This will open up DOSBox in fullscreen, assemble your `.asm` file into a `.COM` 
 ## Optional Step
 For added convenience, add `run.bat`'s location to PATH. By doing this, the terminal command gets shortened to:
 ``` cmd
-run my File.asm
+run myFile.asm
 ```
 for command prompt, and
 ``` PowerShell
