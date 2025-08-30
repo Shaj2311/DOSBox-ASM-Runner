@@ -25,14 +25,15 @@ REM Create temporary config (fullscreen, auto mount, auto compile and debug)
 >> temp.conf echo [dos]
 >> temp.conf echo [ipx]
 >> temp.conf echo [autoexec]
->> temp.conf echo mount c "C://Users/Haider Ali/source/COAL/tools"
+>> temp.conf echo mount c C://Path/To/Your/ASM/Files
 >> temp.conf echo c:
 >> temp.conf echo nasm %fileTitle%.asm -o %fileTitle%.com
 >> temp.conf echo afd %fileTitle%.com
 
 
 REM Launch dosbox using temp.conf
-"C://Users/Haider Ali/Source/COAL/DOSBoxPortable/App/DOSBox/DOSBox.exe" -conf temp.conf
+C://Path/To/DOSBox.exe -conf temp.conf
 
 REM delete temp.conf once DOSBox is launched
 del temp.conf
+
