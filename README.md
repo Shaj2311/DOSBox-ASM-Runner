@@ -40,7 +40,7 @@ or the following command for Bash or PowerShell:
 This will open up DOSBox in fullscreen, assemble your `.asm` file into a `.COM` file and open that `.COM` file inside AFD.
 
 ## Optional Step
-For added convenience, add the `run.bat`'s location to PATH. By doing this, the terminal command gets shortened to:
+For added convenience, add `run.bat`'s location to PATH. By doing this, the terminal command gets shortened to:
 ``` cmd
 run my File.asm
 ```
