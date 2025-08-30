@@ -48,4 +48,5 @@ for command prompt, and
 ``` PowerShell
 run .\myFile.asm
 ```
-for PowerShell. 
+for PowerShell.
+Additionally, the run command can now be called from **any** location, given that the `.asm` file is still in the same location as the nasm and afd executables. 
