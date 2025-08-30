@@ -1,5 +1,5 @@
 # DOSBox-ASM-Runner
-This repo contains a single batch file that can be used to effectively run and debug single-file asm code within DOSBox.
+This repo contains a single Windows batch file that can be used to effectively run and debug single-file asm code within DOSBox.
 This file, when launched, 
 * Launches DOSBox
 * Mounts it to the desired location
