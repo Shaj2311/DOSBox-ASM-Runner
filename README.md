@@ -2,7 +2,7 @@
 This repo contains a single Windows batch file that can be used to effectively run and debug single-file asm code within DOSBox.
 This file, when launched, 
 * Launches DOSBox
-* Mounts it to the desired location
+* Mounts drive to the desired location
 * Assembles `.asm` file to a `.COM` file
 * Opens `.COM` file in AFD
 
