@@ -13,7 +13,7 @@ if not exist "%~f1" (
 )
 
 REM Assemble with NASM
-nasm -f win32 "%~1" -o "%filename%.obj"
+nasm %fileTitle%.asm -o %fileTitle%.com
 if errorlevel 1 (
     echo [ERROR] Assembly failed. Check your NASM syntax.
     exit /b 1
@@ -50,5 +50,6 @@ C://Path/To/DOSBox.exe -conf temp.conf
 
 REM delete temp.conf once DOSBox is launched
 del temp.conf
+
 
 
