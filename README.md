@@ -33,8 +33,19 @@ run.bat myFile.asm
 ```
 or the following command for Bash or PowerShell:
 ``` Bash
-./run.bat ./myFile.asm
+.\run.bat .\myFile.asm
 ```
 (don't forget to replace myFile.asm with the name of your asm file)
 
 This will open up DOSBox in fullscreen, assemble your `.asm` file into a `.COM` file and open that `.COM` file inside AFD.
+
+## Optional Step
+For added convenience, add the `run.bat`'s location to PATH. By doing this, the terminal command gets shortened to:
+``` cmd
+run my File.asm
+```
+for command prompt, and
+``` PowerShell
+run .\myFile.asm
+```
+for PowerShell. 
