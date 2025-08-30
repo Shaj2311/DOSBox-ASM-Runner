@@ -6,6 +6,12 @@ if "%~1"=="" (
     exit /b
 )
 
+REM Terminate if file does not exist
+if not exist "%~f1" (
+    echo Error: File "%~1" not found.
+    exit /b
+)
+
 REM Extract file name without extension
 set "fileTitle=%~n1"
 
