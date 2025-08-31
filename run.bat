@@ -40,10 +40,11 @@ REM Create temporary config (fullscreen, auto mount, auto compile and debug)
 >> temp.conf echo del %fileTitle%.com
 >> temp.conf echo nasm %fileTitle%.asm -o %fileTitle%.com
 >> temp.conf echo if not errorLevel 1 afd %fileTitle%.com
->>temp.conf echo @echo on
+>> temp.conf echo @echo on
 
 REM Launch dosbox using temp.conf
 C://Path/To/DOSBox.exe -conf temp.conf
 
 REM delete temp.conf once DOSBox is launched
 del temp.conf
+
