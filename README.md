@@ -26,27 +26,28 @@ C://Path/To/DOSBox.exe -conf temp.conf
 and replace `C://Path/To/DOSBox.exe` with the path to your DOSBox executable
 The initial setup is now complete.
 ## Usage
-1. Open a terminal window and navigate to the location of your `.asm` file (the `run.bat` file should also be at the same location)
-2. Run the following command for Command Prompt:
+1. Open a terminal window
+2. navigate to the location of your `.asm` file (the `run.bat` file should also be at the same location)
+3. Run the following command for Command Prompt:
 ``` cmd
-run.bat myFile.asm
+run myFile.asm
 ```
 or the following command for Bash or PowerShell:
 ``` Bash
-.\run.bat .\myFile.asm
+run .\myFile.asm
 ```
 (don't forget to replace `myFile.asm` with the name of your `.asm` file)
 
 This will open up DOSBox in fullscreen, assemble your `.asm` file into a `.COM` file and open that `.COM` file inside AFD.
 
 ## Optional Step
-For added convenience, add `run.bat`'s location to PATH. By doing this, the terminal command gets shortened to:
-``` cmd
+For added convenience, add `run.bat`'s location to PATH. By doing this, the batchfile can be launched from any location on your device, given that the target `.asm` file is still at the same location as the `nasm` and `afd` executables.
+This means that commands like:
+``` Bash
+cd C://Path/To/Your/ASM/Files
 run myFile.asm
 ```
-for command prompt, and
-``` PowerShell
-run .\myFile.asm
+get shortened to:
+``` Bash
+run C://Path/To/Your/ASM/Files/myFile.asm
 ```
-for PowerShell.
-Additionally, the run command can now be called from **any** location, given that the `.asm` file is still in the same location as the nasm and afd executables. 
