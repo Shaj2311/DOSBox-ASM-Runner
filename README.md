@@ -25,24 +25,29 @@ and replace `C://Path/To/Your/ASM/Files` with the path to the folder where you `
 C://Path/To/DOSBox.exe -conf temp.conf
 ```
 and replace `C://Path/To/DOSBox.exe` with the path to your DOSBox executable
+
 The initial setup is now complete.
 ## Usage
 1. Open a terminal window
-2. navigate to the location of your `.asm` file (the `run.bat` file should also be at the same location)
+2. Navigate to the location of your `.asm` file (`run.bat` should also be at the same location)
 3. Run the following command for Command Prompt:
 ``` cmd
 run myFile.asm
 ```
-or the following command for Bash or PowerShell:
-``` Bash
+or the following command for PowerShell:
+``` PowerShell
 run .\myFile.asm
+```
+or the following for Bash:
+``` Bash
+run.bat .\myFile.asm
 ```
 (don't forget to replace `myFile.asm` with the name of your `.asm` file)
 
 This will open up DOSBox in fullscreen, assemble your `.asm` file into a `.COM` file and open that `.COM` file inside AFD.
 
 ## Additional Steps
-### Add `run.bat` to PATH
+### 1. Add `run.bat` to PATH
 For added convenience, add `run.bat`'s location to PATH. By doing this, the batchfile can be launched from any location on your device, given that the target `.asm` file is still at the same location as the `nasm` and `afd` executables.
 This means that commands like:
 ``` Bash
@@ -53,7 +58,7 @@ get shortened to:
 ``` Bash
 run C://Path/To/Your/ASM/Files/myFile.asm
 ```
-### Edit Temporary Configuration
+### 2. Edit Temporary Configuration
 The batchfile creates and deletes a temporary config file when executed. The following lines are written to that config file:
 ```> temp.conf echo [sdl]
 >> temp.conf echo fullscreen = true
