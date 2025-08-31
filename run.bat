@@ -16,6 +16,7 @@ if not exist "%~f1" (
 
 REM Extract file name without extension
 set "fileTitle=%~n1"
+set "fileTitle=%fileTitle:/=\%"
 
 REM Create temporary config (fullscreen, auto mount, auto compile and debug)
 > temp.conf echo [sdl]
@@ -46,4 +47,3 @@ C://Path/To/DOSBox.exe -conf temp.conf
 
 REM delete temp.conf once DOSBox is launched
 del temp.conf
-
