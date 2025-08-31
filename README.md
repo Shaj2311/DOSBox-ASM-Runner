@@ -19,6 +19,7 @@ This file, when launched,
 >> temp.conf echo mount c C://Path/To/Your/ASM/Files
 ```
 and replace `C://Path/To/Your/ASM/Files` with the path to the folder where you `.asm` files are placed
+
 5. Navigate to the following line:
 ```
 C://Path/To/DOSBox.exe -conf temp.conf
