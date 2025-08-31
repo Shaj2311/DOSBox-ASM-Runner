@@ -24,7 +24,7 @@ and replace `C://Path/To/Your/ASM/Files` with the path to the folder where you `
 ```
 C://Path/To/DOSBox.exe -conf temp.conf
 ```
-and replace `C://Path/To/DOSBox.exe` with the path to your DOSBox executable
+and replace `C://Path/To/DOSBox.exe` with the path of your DOSBox executable
 
 The initial setup is now complete.
 ## Usage
