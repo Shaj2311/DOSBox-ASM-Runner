@@ -83,4 +83,4 @@ The batchfile creates and deletes a temporary config file when executed. The fol
 >> temp.conf echo if not errorLevel 1 afd %fileTitle%.com
 >>temp.conf echo @echo on
 ```
-If you have any custom settings in your local DOSBox config, add those lines to this section (preceded by `temp.conf echo `). That will cause `run.bat` to launch DOSBox with the same settings you are familiar with.
+If you have any custom settings in your local DOSBox config, add those lines to this section (preceded by `>> temp.conf echo `). That will cause `run.bat` to launch DOSBox with the same settings you are familiar with.
